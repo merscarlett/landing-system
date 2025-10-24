@@ -1,9 +1,9 @@
-#🌍 Books for Soldiers — Landing System
+# 🌍 Books for Soldiers — Landing System
 
 A scalable React + Vite landing-page system built to support hundreds of independent marketing pages.
 This example implements the “Books for Soldiers” initiative — a campaign to send books to Ukrainian defenders.
 
-##🚀 Features
+## 🚀 Features
 - Supports hundreds of independent landings, each with its own HTML entry.
 - Built with React 18 + TypeScript + Vite.
 - Styled using TailwindCSS.
