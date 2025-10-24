@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <title>Books for Soldiers — Подаруй книгу захисникам</title>
+
+    <meta name="description"
+        content="Books for Soldiers — ініціатива, що дарує книги українським захисникам. Підтримай, передай частинку тепла й дому нашим героям." />
+    <meta property="og:title" content="Books for Soldiers — Подаруй книгу захисникам" />
+    <meta property="og:description"
+        content="Кожна історія — це підтримка, тепло та спогади про дім. Долучайся до ініціативи!" />
+    <meta property="og:image" content="/images/og-preview.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://booksforsoldiers.example.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet" />
+
+    <script>
+        !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = "2.0";
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+
+        fbq("init", "268504437953731");
+        fbq("track", "PageView");
+    </script>
+</head>
+
+<body class="bg-stone-900 text-gray-100">
+    <div id="root"></div>
+
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=268504437953731&ev=PageView&noscript=1" />
+    </noscript>
+
+    <script type="module" src="main.tsx"></script>
+</body>
+
+</html>

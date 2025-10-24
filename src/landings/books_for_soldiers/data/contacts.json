@@ -1,0 +1,21 @@
+[
+  {
+    "label": "Email",
+    "value": "b*****s@*****.com",
+    "href": "mailto:b*****s@*****.com"
+  },
+  {
+    "label": "Телефон",
+    "value": "+380 97 *** ** **",
+    "href": "tel:+38097*******"
+  },
+  {
+    "label": "Instagram",
+    "value": "@********",
+    "href": "https://www.instagram.com/*****"
+  },
+  {
+    "label": "Адреса",
+    "value": "м. Київ, вул. Незалежності, ***"
+  }
+]
