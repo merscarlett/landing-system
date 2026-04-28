@@ -1,0 +1,19 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/landings/books_for_soldiers/index.html"
+    },
+    {
+      "source": "/landings/:landing",
+      "destination": "/landings/:landing/index.html"
+    },
+    {
+      "source": "/landings/:landing/",
+      "destination": "/landings/:landing/index.html"
+    }
+  ]
+}

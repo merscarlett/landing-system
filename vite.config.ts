@@ -21,6 +21,8 @@ export default defineConfig({
   root: path.resolve(__dirname, "src"),
   plugins: [react(), tailwindcss()],
   build: {
+    outDir: path.resolve(__dirname, "dist"),
+    emptyOutDir: true,
     rollupOptions: {
       input: entries,
     },

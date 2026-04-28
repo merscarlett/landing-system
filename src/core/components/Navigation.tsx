@@ -22,8 +22,7 @@ export default function Navigation({ items, className = "", linkClassName = "" }
       top,
       behavior: "smooth",
     });
-
-    history.replaceState(null, "", " ");
+    history.replaceState(null, "", href);
   };
 
   return (

@@ -18,6 +18,8 @@ export default function ScrollToTopButton({
     const toggleVisibility = () => {
       setVisible(window.scrollY > showAfter);
     };
+
+    toggleVisibility();
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, [showAfter]);
@@ -28,11 +30,12 @@ export default function ScrollToTopButton({
 
   return (
     <button
+      type="button"
       onClick={scrollToTop}
       className={`fixed transition-all duration-300 ${
         visible ? "opacity-100" : "pointer-events-none opacity-0"
       } ${buttonClassName}`}
-      aria-label="Go back up"
+      aria-label="Повернутися нагору"
     >
       <ArrowUp className={iconClassName} />
     </button>

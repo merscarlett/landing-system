@@ -20,26 +20,10 @@ function ReviewsSection() {
     if (!container) return;
 
     const scrollAmount = container.clientWidth * 0.5;
-    const targetScroll =
-      direction === "left"
-        ? container.scrollLeft - scrollAmount
-        : container.scrollLeft + scrollAmount;
-
-    const duration = 500;
-    const start = container.scrollLeft;
-    const startTime = performance.now();
-
-    const animate = (time: number) => {
-      const elapsed = time - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
-
-      container.scrollLeft = start + (targetScroll - start) * ease;
-
-      if (progress < 1) requestAnimationFrame(animate);
-    };
-
-    requestAnimationFrame(animate);
+    container.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -54,8 +38,10 @@ function ReviewsSection() {
 
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8">
         <button
+          type="button"
           onClick={() => smoothScroll("left")}
-          className="absolute top-1/2 left-0 z-10 -translate-y-1/2 rounded-full bg-yellow-400/80 p-3 text-gray-900 shadow-lg transition hover:bg-yellow-400"
+          className="absolute top-1/2 left-0 z-10 -translate-y-1/2 rounded-full bg-yellow-400/80 p-3 text-gray-900 shadow-lg transition hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200"
+          aria-label="Показати попередні відгуки"
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
@@ -66,7 +52,7 @@ function ReviewsSection() {
         >
           {reviews.map((item, index) => (
             <div
-              key={index}
+              key={item.name}
               className={`fade-in-up ${isVisible ? "show" : ""} flex w-[80%] shrink-0 snap-center sm:w-[45%] lg:w-[30%]`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
@@ -84,8 +70,10 @@ function ReviewsSection() {
         </div>
 
         <button
+          type="button"
           onClick={() => smoothScroll("right")}
-          className="absolute top-1/2 right-0 z-10 -translate-y-1/2 rounded-full bg-yellow-400/80 p-3 text-gray-900 shadow-lg transition hover:bg-yellow-400"
+          className="absolute top-1/2 right-0 z-10 -translate-y-1/2 rounded-full bg-yellow-400/80 p-3 text-gray-900 shadow-lg transition hover:bg-yellow-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-yellow-200"
+          aria-label="Показати наступні відгуки"
         >
           <ChevronRight className="h-6 w-6" />
         </button>

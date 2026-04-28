@@ -37,7 +37,7 @@ function AdvantagesSection() {
         <div className="mx-auto grid max-w-7xl [grid-auto-rows:1fr] gap-8 px-6 sm:grid-cols-2 sm:px-8 lg:grid-cols-3">
           {advantages.map((item, index) => (
             <div
-              key={index}
+              key={item.title}
               className={`fade-in-up ${isVisible ? "show" : ""} flex`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >

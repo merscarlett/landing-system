@@ -53,14 +53,6 @@
   }
 
   .fade-in-up {
-    opacity: 0;
-    transform: translateY(20px);
-    transition:
-      opacity 0.8s ease,
-      transform 0.8s ease;
-  }
-
-  .fade-in-up {
     position: relative;
     opacity: 0;
     transform: translateY(10px);
@@ -78,5 +70,19 @@
   .fade-in-down.show {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fadeInUp,
+    .animate-fadeInUp-delay,
+    .animate-fadeInUp-delay-2,
+    .animate-fadeInDown,
+    .animate-fadeInDown-delay,
+    .fade-in-up {
+      animation: none;
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
   }
 }

@@ -17,7 +17,7 @@ function FooterSection() {
   }));
 
   return (
-    <footer id="contacts" className="bg-stone-900 text-gray-200">
+    <section id="contacts" className="bg-stone-900 text-gray-200">
       <div className="mx-auto max-w-7xl px-6 py-7">
         <Footer
           contacts={contacts}
@@ -29,7 +29,7 @@ function FooterSection() {
           copyright="© 2025 Books for Soldiers. Усі права захищені."
         />
       </div>
-    </footer>
+    </section>
   );
 }
 
